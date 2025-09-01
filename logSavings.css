@@ -51,7 +51,7 @@ overflow: hidden;
 }
 
 .status-table{
-    margin-top: 10%;
+    margin-top: 20px;
 }
   
 
@@ -230,6 +230,10 @@ td{
   flex-direction: row;
   align-items: center;
   gap: 2px;
+}
+
+.menu-list label{
+  font-weight: bold;
 }
 
 .history-button input, .log-button input {

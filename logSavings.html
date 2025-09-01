@@ -56,6 +56,20 @@
             </div> 
             
             </div>
+
+            <div class="status-table">
+    <table>
+        <caption>CURRENT SAVINGS PLAN STATUS</caption>
+        <tr>
+            <th>Due Payment</th>
+            <th>Paid</th>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>0</td>
+        </tr>
+    </table>
+</div>
             
             <div class="history-table" style="display: none;">
                     <div class="history-button"> <input type="button" value="Savings Log" id="logDetailsSelect"> <input type="button" value="History" id="historyTableSelect">
@@ -106,6 +120,7 @@
 
 const logButton = document.querySelector('.log-button');
 const logForm = document.querySelector('.log-form');
+const statusTable = document.querySelector('.status-table');
 const historyTable = document.querySelector('.history-table');
 const historyBtn = document.getElementById('history');
 const logDetailsBtn = document.getElementById('logDetails');
@@ -115,12 +130,14 @@ const logDetailsSelect = document.getElementById('logDetailsSelect');
 historyBtn.onclick = function () {
   historyTable.style.display = 'block';
   logForm.style.display = 'none';
+  statusTable.style.display = 'none';
   logButton.style.display = 'none'; // 🔥 ocultar botones principales
 };
 
 // Cuando se hace click en "Log Income" (arriba)
 logDetailsBtn.onclick = function () {
   logForm.style.display = 'block';
+   statusTable.style.display = 'block';
   historyTable.style.display = 'none';
   logButton.style.display = 'flex'; // 🔥 mostrar botones de nuevo
 };
@@ -128,6 +145,7 @@ logDetailsBtn.onclick = function () {
 // Cuando se hace click en "Log Income" dentro de history
 logDetailsSelect.onclick = function () {
   logForm.style.display = 'block';
+   statusTable.style.display = 'block';
   historyTable.style.display = 'none';
   logButton.style.display = 'flex'; // 🔥 mostrar botones de nuevo
 };
