@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sofia&family=Trocchi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Confirm Changes Modal -->
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <p>Do you want to confirm the changes?</p>
+    <button id="confirmChangesBtn">Confirm</button>
+    <button id="cancelChangesBtn">Cancel</button>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <p>The update was saved successfully!</p>
+    <button id="successOkBtn">Confirm</button>
+  </div>
+</div>
+
+    <div class="top-bar">
+        <img src="icons/backArrow.png" alt="Back" class="backArrow" onclick="history.back()">
+        <a href="home.html" class="home-icon">
+        <i class="bi bi-house-fill"></i></a>
+    </div>
+    <div class="admin">
+        <input type="button" value="Admin" class="admin-button" onclick="location.href='admin.html'">
+    </div>
+    <div class="contenedor-padre">
+        <div class="contenedor">
+            <div class="username">
+                <i class="bi bi-person-circle"></i>
+                <h1>NAME</h1>
+            </div>
+            <div class="profile-header">
+                <div class="form-row"><label for="email">Email:</label>
+                    <input class="profile-input" type="email" id="email" name="email" placeholder="Email" disabled />
+                </div>
+                <div class="form-row"><label for="Nombre">Name:</label>
+                    <input class="profile-input" type="text" id="Nombre" name="Nombre" placeholder="Nombre" disabled />
+                </div>
+                <div class="form-row"><label for="apellido">Last Name:</label>
+                    <input class="profile-input" type="text" id="apellido" name="apellido" placeholder="Apellido" disabled />
+                </div>
+                <div class="form-row"><label for="dob">Date of Birth:</label>
+                    <input class="profile-input" type="date" id="dob" name="dob" placeholder="123456" disabled />
+                </div>
+                <div class="form-row"><label for="telefono">Phone Number:</label>
+                    <input class="profile-input" type="tel" id="telefono" name="telefono" placeholder="7777777777" disabled />
+                </div>
+                <div class="form-row"><label for="country">Country:</label>
+                    <input class="profile-input" type="text" id="country" name="country" placeholder="Country" disabled />
+                </div>
+            </div>
+            <div class="button">
+                <input type="button" value="Edit Profile" id="edit-btn">
+                <input type="button" id="save-btn" value="Save" style="display:none;">
+                <input type="button" id="cancel-btn" value="Cancel" style="display:none;">
+            </div>
+        </div>
+    </div>
+   <script>
+  const editBtn = document.getElementById('edit-btn');
+  const saveBtn = document.getElementById('save-btn');
+  const cancelBtn = document.getElementById('cancel-btn');
+  const inputs = document.querySelectorAll('.profile-input');
+  let originalValues = {};
+
+  const confirmModal = document.getElementById('confirmModal');
+  const successModal = document.getElementById('successModal');
+  const confirmChangesBtn = document.getElementById('confirmChangesBtn');
+  const cancelChangesBtn = document.getElementById('cancelChangesBtn');
+  const successOkBtn = document.getElementById('successOkBtn');
+
+  editBtn.onclick = function () {
+      inputs.forEach(input => {
+          originalValues[input.id] = input.value;
+          input.disabled = false;
+      });
+      editBtn.style.display = 'none';
+      saveBtn.style.display = 'inline-block';
+      cancelBtn.style.display = 'inline-block';
+  };
+
+  saveBtn.onclick = function () {
+      // Show confirmation modal
+      confirmModal.style.display = 'flex';
+  };
+
+  confirmChangesBtn.onclick = function () {
+      // Apply changes
+      inputs.forEach(input => {
+          input.disabled = true;
+      });
+      confirmModal.style.display = 'none';
+      successModal.style.display = 'flex'; // Show success modal
+  };
+
+  cancelChangesBtn.onclick = function () {
+      confirmModal.style.display = 'none'; // just close confirm modal
+  };
+
+  successOkBtn.onclick = function () {
+      successModal.style.display = 'none';
+      saveBtn.style.display = 'none';
+      cancelBtn.style.display = 'none';
+      editBtn.style.display = 'inline-block';
+  };
+
+  cancelBtn.onclick = function () {
+      inputs.forEach(input => {
+          input.value = originalValues[input.id];
+          input.disabled = true;
+      });
+      saveBtn.style.display = 'none';
+      cancelBtn.style.display = 'none';
+      editBtn.style.display = 'inline-block';
+  };
+</script>
+</body>
+
+</html>

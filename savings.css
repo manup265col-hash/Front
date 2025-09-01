@@ -1,0 +1,147 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Lato", serif, sans-serif; 
+  font-weight: 500;
+  background-image: url('ChatGPT Image Aug 6, 2025, 07_04_36 AM.png');
+  background-color: rgb(197, 195, 195);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.backArrow, .home-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.home-icon {
+  font-size: 2em;
+  color: #90b067;
+  text-decoration: none;
+}
+
+.backArrow:hover,
+.home-icon:hover {
+  transform: scale(1.5);
+  transition: transform 0.5s ease;
+}
+
+/* ===== CONTENEDORES ===== */
+.contenedor-padre {
+  background: linear-gradient(#606c3886, #90b067);
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px; /* más ancho para que entre la tabla */
+  width: 95%;
+  padding: 10px;
+  border-radius: 20px;
+  min-height: 300px;
+  max-height: 90vh;
+  margin: 10px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contenedor {
+  background: rgba(222, 222, 222, 0.176);
+  border-radius: 30px;
+  padding: 30px; /* aquí está el espacio entre tabla y borde */
+  margin: 10px 30px; /* separación de 10px entre contenedor y padre */
+  width: auto;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 3px 10px rgba(1, 1, 1, 0.1);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* ===== BOTONES ===== */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.contenedor .button input {
+  flex: 1;
+  min-width: 120px;
+  border-radius: 500px;
+  padding: 10px;
+  background-color: #a26127;
+  color: #fefae0;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 3px 3px rgba(1, 1, 1, 0.1);
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+.contenedor .button input:hover {
+  background-color: #dda15e;
+  transition: 0.3s;
+}
+
+/* ===== TABLA ===== */
+.savings-table {
+  width: 100%; /* ocupa todo el ancho del contenedor */
+  border-collapse: separate;
+  border-radius: 15px;
+  border-spacing: 0;
+  box-shadow: 0px 5px 3px 3px rgba(1, 1, 1, 0.1);
+  margin: 10px 0;
+  table-layout: fixed; /* ajusta columnas al ancho disponible */
+}
+
+.savings-table caption {
+  text-align: center;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.221);
+  font-size: clamp(14px, 2vw, 18px);
+  padding: 20px;
+  margin-bottom: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: #606C38;
+  color: #0c0c0c;
+  border: none;
+}
+
+.savings-table th {
+  color: #DDA15E;
+  background-color: #778647;
+  padding: 20px 8px;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: clamp(12px, 1.5vw, 13px);
+}
+
+.savings-table td {
+  background-color: #dceda19a;
+  padding: 20px 8px;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: clamp(12px, 1.5vw, 14px);
+}

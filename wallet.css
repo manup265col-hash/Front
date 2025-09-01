@@ -1,0 +1,125 @@
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('ChatGPT\ Image\ Aug\ 6\,\ 2025\,\ 07_04_36\ AM.png');
+    background-color: rgb(197, 195, 195);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    font-family: "Lato", serif, sans-serif; 
+  font-weight: 500;
+  font-style: normal;
+}
+.top-bar {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+.backArrow{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.home-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    color: #90b067;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.backArrow:hover,
+.home-icon:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease;
+}
+.username {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+div.contenedor-padre{
+    background: linear-gradient(#606c3886, #90b067);
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 70vw;
+    min-width: 300px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    min-height: 500px;
+    max-height: 800px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.contenedor{
+    margin: auto;
+    width: 100%;
+    padding: 20px 30px 10px 30px;
+    background: rgba(222, 222, 222, 0.176);
+    border-radius: 50px;
+    max-width: 90%;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 3px 10px rgba(1, 1, 1, 0.1);
+    overflow: hidden;
+    max-height: 600px;
+}
+.contenedor h2{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.contenedor h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fefae0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(1, 1, 1, 0.2);
+}
+.contenedor .button input{
+   width: 50%;
+   border-radius: 500px;
+   padding: 15px 15px;
+   margin: 10px auto;
+   background-color: #a26127;
+   color: #fefae0;
+   border: none;
+   cursor: pointer;
+   box-shadow: 0px 5px 3px 3px rgba(1, 1, 1, 0.1);
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.contenedor .button input:hover{
+    background-color: #dda15e;
+    transition: 0.3s;
+}

@@ -1,0 +1,256 @@
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('ChatGPT\ Image\ Aug\ 6\,\ 2025\,\ 07_04_36\ AM.png');
+    background-color: rgb(197, 195, 195);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    font-family: "Lato", serif, sans-serif; 
+  font-weight: 500;
+}
+.top-bar {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+.backArrow{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.home-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    color: #90b067;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.backArrow:hover,
+.home-icon:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease;
+}
+.username {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+div.contenedor-padre{
+    background: linear-gradient(#606c3886, #90b067);
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100vw;
+    min-width: 700px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    min-height: 300px;
+    max-height: 620px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.contenedor{
+    margin: auto;
+    width: 100%;
+    padding: 20px 30px 10px 30px;
+    background: rgba(222, 222, 222, 0.176);
+    border-radius: 50px;
+    max-width: 90%;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 3px 10px rgba(1, 1, 1, 0.1);
+    overflow: hidden;
+    max-height: 600px;
+}
+.contenedor h2{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.contenedor h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fefae0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(1, 1, 1, 0.2);
+}
+.contenedor .button input{
+   width: 25%;
+   border-radius: 500px;
+   padding: 15px 15px;
+   margin: 10px 0;
+   background-color: #a26127;
+   color: #fefae0;
+   border: none;
+   cursor: pointer;
+   box-shadow: 0px 5px 3px 3px rgba(1, 1, 1, 0.1);
+   box-sizing: border-box;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.contenedor .button input:hover{
+    background-color: #dda15e;
+    transition: 0.3s;
+}
+table{
+   width: 100%;
+   box-shadow: 0px 5px 3px 3px rgba(1, 1, 1, 0.1);
+    border-collapse: separate;
+    border-radius: 15px;
+    border-spacing: 0;
+    overflow: hidden;
+    margin: 0px 0px 20px 0px;
+}
+th{
+    color: #DDA15E;
+    background-color: #778647;
+    padding: 20px;
+    text-align: center;
+}
+td{
+    background-color: #dceda19a;
+    padding: 20px;
+    text-align: center;
+}
+.contenedor .menu-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+label{
+    display: block;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0;
+    font-weight: bold;
+}
+.split-select {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  font-weight: bold;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0px 5px 3px 3px rgba(1, 1, 1, 0.1);
+}
+
+/* The dropdown itself */
+.split-select select {
+  width: 100%;
+  padding: 10px 50px 10px 20px; /* leave space for arrow */
+  border: none;
+  border-radius: 50px;
+  background: #fefae0;
+  color: #0c0c0c;
+  cursor: pointer;
+  font-size: 14px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Arrow box */
+.split-select::after {
+  content: "▼"; /* you can replace with SVG */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;           /* size of arrow area */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fefae0;
+  color: #a26127;
+  pointer-events: none;  /* keeps select clickable */
+  transition: 0.5s;
+}
+.split-select select:focus {
+  background: #fdf5d0aa;
+  outline: none;
+}
+#search-btn{
+    width: 20%;
+    border-radius: 500px;
+    padding: 15px 15px;
+    margin: 10px auto;
+    background-color: #a26127;
+    color: #fefae0;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 3px 3px rgba(1, 1, 1, 0.1);
+}
+#search-btn:hover{
+    background-color: #dda15e;
+    transition: 0.3s;
+}
+.varExpense input,
+.fixExpense input,
+#varExp,
+#fixExp {
+    width: 30%;
+    padding: 15px;
+    margin: 20px 0px 0px 0px;
+    display: inline;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #606C38;
+    color: #0c0c0c;
+    border: none;
+    cursor: pointer;
+}
+#fixExpSelect,
+#fixExp {
+    margin-left: 5px;
+}
+#varExp:hover,
+#fixExpSelect:hover{
+    background-color: #dceda19a;
+    transition: 0.5s;
+}
+#fixExpSelect,
+#varExp {
+   background-color: #606c389f;
+}
+.varExpense,
+.fixIncome {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 0;
+}
